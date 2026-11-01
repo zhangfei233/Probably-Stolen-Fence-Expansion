@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Manifest>
+  <ID>fence_expansion</ID>
+  <Name>销赃人 / Fence Expansion</Name>
+  <Author>Local Mod Development</Author>
+  <ModVersion>0.3.2</ModVersion>
+  <Description>扩展王尔德的销赃人升级树：15项技能、物资箱扩容与隐匿、钥匙卡品质、黑市访客、大盗与末影人，以及异界消耗品。支持中英文和技能价格配置。Expand Wilde’s network with 15 upgrades, enhanced supply crates and keycards, black-market visitors, the Master Thief, Enderman, and otherworldly consumables. Supports Chinese and English with configurable upgrade costs.</Description>
+  <GameVersions><Version>0.46D</Version></GameVersions>
+  <Prerequisites />
+  <Assemblies><Assembly>FenceExpansion.dll</Assembly></Assemblies>
+  <Capabilities>
+    <Capability>dynamic-code</Capability>
+  </Capabilities>
+</Manifest>
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+# Only publish the mod source, original project assets and build documentation.
+# This allowlist also excludes future local game copies / backups by default.
+/*
+!/.gitignore
+!/README.md
+!/RELEASE.md
+!/LICENSE
+!/LICENSE.*
+!/NOTICE
+!/build.ps1
+!/skill.json
+!/assets/
+!/src/
+!/tools/
+
+/tools/*
+!/tools/GenerateSkills.ps1
+
+# Local output, SDK caches, diagnostics, and user/editor settings.
+**/bin/
+**/obj/
+**/.vs/
+**/.idea/
+**/.vscode/
+**/__pycache__/
+*.user
+*.suo
+*.log
+*.tmp
+*.bak
+*.dll
+*.exe
+*.pdb
+*.zip
+.DS_Store
+Thumbs.db
+
+# Explicit exclusions document the private workspace directories.
+/backup/
+/tests/
+/research/
+/exports/
+/dist/
+/Probably Stolen_copy/
+/mods_steam/
+/mods/
+/.build-home/
+/.dotnet-cli/
+/.agents/
+/.codex/

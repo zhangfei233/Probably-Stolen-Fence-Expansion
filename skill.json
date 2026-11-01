@@ -1,0 +1,230 @@
+{
+    "skill_1_1": {
+        "name": "更大的箱子",
+        "description": "增加物资箱的容量。（开启时依旧装满！）",
+        "cost": 300,
+        "icon": "skill_1_1.png",
+        "effect": "增加所有物资箱容器的容量，使容器的长和宽各增加2格。开启箱子生成战利品时仍然装满。 扩容立即生效；已经开启的箱子只扩容，不追加物资。尚未开启的箱子开启时按扩大后的空间尽可能填满：从对应掉落池中继续抽取能够放入的物品，直至不存在可放入的合法候选；允许因形状留下无法利用的空格。包含新增奢侈品物资箱。",
+        "prerequisites": [],
+        "layout": {
+            "row": 1,
+            "column": 1
+        },
+        "name_en": "Bigger Crates",
+        "description_en": "Increase supply crate capacity. (Still packed with loot when opened!)"
+    },
+    "skill_1_2": {
+        "name": "极限容量",
+        "description": "进一步增加物资箱的容量。（开启时依旧装满！）",
+        "cost": 700,
+        "icon": "skill_1_2.png",
+        "effect": "进一步增加所有物资箱容器的容量，再次使容器的长和宽各增加2格。开启箱子生成战利品时仍然装满。 扩容立即生效；已经开启的箱子只扩容，不追加物资。尚未开启的箱子开启时按扩大后的空间尽可能填满：从对应掉落池中继续抽取能够放入的物品，直至不存在可放入的合法候选；允许因形状留下无法利用的空格。包含新增奢侈品物资箱。",
+        "prerequisites": [
+            "skill_1_1"
+        ],
+        "layout": {
+            "row": 1,
+            "column": 2
+        },
+        "name_en": "Maximum Capacity",
+        "description_en": "Further increase supply crate capacity. (Still packed with loot when opened!)"
+    },
+    "skill_1_3": {
+        "name": "隐匿改装",
+        "description": "使物资箱获得隐匿效果，其内容物不会被盘查。",
+        "cost": 800,
+        "icon": "skill_1_3.png",
+        "effect": "使物资箱获得隐匿暗格的效果，其中的物品在治安部的盘查时会被无视。 沿用此前规则，仅对已开启的物资箱生效；购买时立即覆盖现有已开箱，后续开箱自动生效，包含奢侈品物资箱。物品移出后不再受此容器保护。",
+        "prerequisites": [
+            "skill_1_2"
+        ],
+        "layout": {
+            "row": 1,
+            "column": 3
+        },
+        "name_en": "Hidden Compartments",
+        "description_en": "Supply crates conceal their contents from inspections."
+    },
+    "skill_2_1": {
+        "name": "查缺补漏",
+        "description": "解锁黑市人物出现概率的上限至100%",
+        "cost": 150,
+        "icon": "skill_2_1.png",
+        "effect": "解锁游戏内黑市人物的出现概率上限，从原本的95%调整至100%。本升级只加概率上限不加概率，要注意排查游戏对于该概率的计算方式，确保在累加过程中不检测概率上限，而在最后统一截断到上限。",
+        "prerequisites": [],
+        "layout": {
+            "row": 2,
+            "column": 1
+        },
+        "name_en": "Closing the Gap",
+        "description_en": "Raise the appearance chance cap for black market visitors to 100%."
+    },
+    "skill_2_2": {
+        "name": "声名鹊起",
+        "description": "彻底解锁黑市人物出现概率的上限，超过100%的部分转化为对应黑市角色的专属折扣，最多优惠50%。",
+        "cost": 600,
+        "icon": "skill_2_2.png",
+        "effect": "各类黑市角色独立使用自身最终累计概率P，界面显示原始概率，实际出现概率最多100%。专属折扣=min(50,max(0,P-100))%，按原版折扣机制降低该角色待售商品价格。130%小偷概率对应小偷30%折扣，160%大盗概率对应大盗50%折扣，彼此独立；此技能折扣最多五折。折扣理由为“黑市的名声”，英文Black Market Reputation。取消全部额外数量和特殊物资箱/神经模组概率加成，恢复原本数量及基础概率。其他原版折扣仍按游戏机制叠加，本技能自身不超过50%。",
+        "prerequisites": [
+            "skill_2_1"
+        ],
+        "layout": {
+            "row": 2,
+            "column": 2
+        },
+        "name_en": "Rising Reputation",
+        "description_en": "Remove the appearance chance cap for black market visitors. Chance above 100% grants a discount from that visitor type, up to 50% off."
+    },
+    "skill_2_3": {
+        "name": "稳定的销路",
+        "description": "小偷和大盗会稳定额外出售一个物资箱。",
+        "cost": 1100,
+        "icon": "skill_2_3.png",
+        "effect": "只有原版小偷与新增大盗每次额外出售一个物资箱，食物窃贼和扒手不享受。箱种从NPC自身允许种类中生成，大盗固定奢侈品物资箱。奖励箱第一个放入，不占正常商品数量预算，技能2_2仅影响售价；随后仍独立生成正常商品，其中仍可能含物资箱。按奖励箱实际外部形状占格扣除可用空间，内部扩容不增加外部占格。",
+        "prerequisites": [
+            "skill_2_2"
+        ],
+        "layout": {
+            "row": 2,
+            "column": 3
+        },
+        "name_en": "A Steady Supply",
+        "description_en": "Thieves and Master Thieves always offer one extra supply crate."
+    },
+    "skill_3_1": {
+        "name": "地下开锁匠",
+        "description": "你可以在地下交易所用两张不同的部门卡片（指挥除外）兑换一张普通指挥卡片。",
+        "cost": 300,
+        "icon": "skill_3_1.png",
+        "effect": "如果玩家解锁了地下交易所的功能（每晚在垃圾桶里进行特定配方的物资兑换），则可以在地下交易所用两张不同的部门卡片（指挥卡除外）兑换一张指挥卡片。消耗的卡片必须是不同部门的卡片，任意品质都可以。兑换的指挥卡片的品质固定为普通。",
+        "prerequisites": [],
+        "layout": {
+            "row": 3,
+            "column": 1
+        },
+        "name_en": "Underground Locksmith",
+        "description_en": "At the Underground Exchange, trade two keycards from different departments (excluding Command) for one Common Command Keycard."
+    },
+    "skill_3_2": {
+        "name": "夜间降温",
+        "description": "你学会在夜间彻底将赃物的热度清零。",
+        "cost": 600,
+        "icon": "skill_3_2.png",
+        "effect": "睡觉进入下一天时，在地下交易所兑换和夜间奖励全部结算后，递归清理玩家拥有的全部物品，包括垃圾桶及嵌套容器内物品：仅移除赃物标签及其热度，不移除违禁品标签，不处理尚属顾客的商品。",
+        "prerequisites": [
+            "skill_3_1"
+        ],
+        "layout": {
+            "row": 3,
+            "column": 2
+        },
+        "name_en": "Cooling Off",
+        "description_en": "You have learned to completely clear the heat from stolen goods overnight."
+    },
+    "skill_3_3": {
+        "name": "电子屏障",
+        "description": "部署一道高科技电子屏障，使所有进入你的商店的赃物无法被追踪，其热度瞬间清零",
+        "cost": 1000,
+        "icon": "skill_3_3.png",
+        "effect": "购买技能时立即递归清理玩家现有全部物品的赃物标签及热度。此后任何途径取得物品所有权的一瞬间，对物品及随之取得所有权的嵌套内容执行相同清理。交易完成前顾客的物品仍是赃物。只清除赃物标签，不清除违禁品标签。",
+        "prerequisites": [
+            "skill_3_2"
+        ],
+        "layout": {
+            "row": 3,
+            "column": 3
+        },
+        "name_en": "Electronic Shield",
+        "description_en": "Deploy a high-tech electronic barrier that makes stolen goods entering your shop untraceable, instantly clearing their heat."
+    },
+    "skill_4_1": {
+        "name": "金灯大盗",
+        "description": "杰克逊博士现在会售卖【金灯】，金灯可以吸引来自黑市的大盗。",
+        "cost": 888,
+        "icon": "skill_4_1.png",
+        "effect": "前置为基础页供货商第三项“周一特供”（JACKSON_SPECIAL_STOCK），但金灯不是其特殊商品，售卖概率与日期规则不变。博士解锁后每次按原版黑灯随机出售概率提供至多一盏金灯，不保证出现。金灯基础价值888，图标使用skill_4_1，外部占格2×3；每盏基础吸引概率30%加黑市声望/2，享受第二分支及技能6。大盗使用assets/master thief.png，只出售不购买。库存严格依次生成：若已购买技能2_3，先额外固定生成一个奢侈品物资箱；再独立以70%概率尝试生成一个奢侈品物资箱；再独立以10%概率尝试生成一个神经核心模组，成功后80%受限制、20%无限制；最后用随机高价商品尽可能填满当前待售窗口。随机高价池来自全部正常交易及地下交易所可反复获得的非剧情物品，基础价值严格大于150，包含机器和不能放入物资箱的商品。按物品ID去重、等权抽取且允许重复；选中的商品放不下时改试其他候选，每轮穷尽仍无可放入者才停止，商品不得塞入其他待售容器。商品数量不再沿用扒手，不设固定件数。技能2_2只提供对应NPC最高50%的专属折扣。奢侈品物资箱使用游戏慰问包裹图标、指挥部识别卡开启，享受分支1及钥匙品质机制。每次生成战利品先放恰好一张随机品质的指挥部识别卡，再沿用原有奢侈品算法生成其他物品；保底卡不受开锁卡品质和扩容影响，不进入品质加权及扩容候选池。已开启箱子取走卡后不会补发。箱内其他物品仍限正常交易可获得的奢侈品，排除剧情物品与容器以免递归。",
+        "prerequisites": [
+            "JACKSON_SPECIAL_STOCK"
+        ],
+        "layout": {
+            "row": 4,
+            "column": 1
+        },
+        "name_en": "The Golden-Lamp Thief",
+        "description_en": "Dr. Jackson now sells Golden Lamps, which attract Master Thieves from the black market."
+    },
+    "skill_4_2": {
+        "name": "异界伙伴",
+        "description": "通过黑市的线人，你联系到了一位来自异界的伙伴，他似乎对各种物资箱非常感兴趣，你可以打电话邀请他来收购一个物资箱。",
+        "cost": 600,
+        "icon": "skill_4_2.png",
+        "effect": "购买后在交易区生成1×1格名片，使用ender_eye.png，双击以原版名片图片界面打开ender_frame.png，注册电话0058及联系人“末影人 / Enderman”。电话对话：嘿朋友，你又准备了我最爱的物资箱吗？→下一步→是的/还没；是的→好的，那我们明天见→按原版电话预约加入次日靠后的访客队列；还没→直接挂断，不消耗预约。每天最多预约一次，冷却1天，重复拨打不重复预约。末影人贴图enderman.png，只收购不出售；每次最多收购玩家的一件物资箱，包含已开和未开箱及奢侈品箱，箱体加内容按原版完整估值。初始预算max(1000,2000+当前黑市声望*15)，沿用正常商人的报价与砍价机制，报价受预算限制，玩家接受时自行承担超出预算的价值；不额外设置专属压价/折扣。入场：嘿朋友，我来啦！我最爱的物资箱在哪？老规矩，我只拿一个哦。→交易；结束交易：那下次再见！→退场。全部新增界面、对话有英文版本。",
+        "prerequisites": [
+            "skill_4_1"
+        ],
+        "layout": {
+            "row": 4,
+            "column": 2
+        },
+        "name_en": "An Otherworldly Partner",
+        "description_en": "Through your black market contacts, you have met a partner from another world with a keen interest in supply crates. Call to invite him to buy one."
+    },
+    "skill_4_3": {
+        "name": "异界美味",
+        "description": "经过与异界伙伴的相处，他为你带来了来自异界的美食。这些美食因其新鲜感和稀缺度很快成为了奢侈品。在本局游戏中解锁这些美食。",
+        "cost": 800,
+        "icon": "apple.png",
+        "effect": "新增两种可交易且可摄入的商品：附魔之瓶 / Bottle o’ Enchanting，烟酒类与奢侈品标签，基础价格500，bottle.png，2列3行；金苹果 / Golden Apple，食物与奢侈品标签，基础价格800，apple.png，2列2行。物品图片按实际网格大小等比例缩放，不能越出占格范围。购买本技能前无任何正常生成渠道；购买后仅在小偷、扒手、大盗及奢侈品物资箱产生，不修改共用公共掉落表，不能扩散到其他商人或开箱渠道。小偷和扒手各物品采用较稀有档独立抽取，概率分别为5%×原版黑市库存倍率，与原版较稀有商品同档；奖励箱先放，再在原版随机库存前尝试，每种每次最多尝试生成一件，仍受当前窗口空间限制。大盗将二者各作为一个等权ID加入高价随机池，允许重复；奢侈品箱将二者加入现有奢侈品候选池，采用相同的概率、品质与扩容填充规则。购买后立即更新池，存档读取按本局技能状态重新决定池成员。 附魔之瓶使用与原版香烟相同的SUBSTANCE烟酒类标签，移除ALCOHOL酒精标签；摄入后直接永久增加玩家基础幸运5点，随原版HealthData保存，不随睡眠消失。金苹果摄入后获得“金苹果的祝福 / Golden Apple's Blessing”状态，持续到下次睡眠（原版一天状态的时机）；重复摄入仅刷新一天，不叠加强度或时长。祝福令出售物品最终实际到账金额增加25%，基于原版砍价及预算封顶后的实际收入计算，额外信用点取floor，不改变买入价格或NPC预算扣款。状态保存在本局ModData中，读档恢复，显示在角色当前特性/状态列表中；不会进入新游戏可选择特性池。",
+        "prerequisites": [
+            "skill_4_2"
+        ],
+        "layout": {
+            "row": 4,
+            "column": 3
+        },
+        "name_en": "Otherworldly Delicacies",
+        "description_en": "Your otherworldly partner has introduced you to delicacies from his world. Their novelty and rarity have made them luxury goods. Unlock them for this run."
+    },
+    "skill_5": {
+        "name": "黑帮大佬",
+        "description": "你在黑市的声望达到了头领级别，你可以花费信用点指示黑市的小弟帮你执行任务提高其他阵营的声望。提升的声望与自身的黑市声望正相关，且优先瞄准声望最低的阵营。",
+        "cost": 1200,
+        "icon": "skill_5.png",
+        "effect": "睡前选项新增“指派小弟执行任务”，每晚最多执行一次，花费500信用点。排除黑市自身及声望已满或不可提升的阵营，从剩余阵营中选择当前声望最低者，并列随机。提升量floor(当前黑市声望*10%)，不超过目标阵营声望上限。黑市声望<=0、提升量为0、无有效目标或信用点不足时不执行且不扣费；成功时仅扣一次500信用点。",
+        "prerequisites": [],
+        "layout": {
+            "row": 5,
+            "column": 1
+        },
+        "name_en": "Crime Boss",
+        "description_en": "Your black market reputation has earned you a leadership role. Spend credits to send your associates on missions that improve your standing with other factions. Gains scale with your black market reputation and prioritize the faction with the lowest reputation."
+    },
+    "skill_6": {
+        "name": "黑市头牌",
+        "description": "你在黑市的影响力达到了顶点，现在你展示框里的每一盏灯都会独立尝试吸引一名额外的黑市角色。",
+        "cost": 3000,
+        "icon": "skill_6.png",
+        "effect": "展示框中每盏黑灯或金灯各独立尝试一次，使用该灯对应NPC类别的最终累计概率，多个同类灯仍正常累加概率。3盏灯总共尝试3次，不再另加原有按类别的一次尝试；不同类别各吸引对应角色。成功到访者为不占普通顾客名额的额外顾客，随机排列。专属折扣对每个到访NPC按其类别独立生效，上限50%。",
+        "prerequisites": [],
+        "layout": {
+            "row": 5,
+            "column": 2
+        },
+        "name_en": "Black Market Headliner",
+        "description_en": "Your black market influence has reached its peak. Each lamp in your display cases now independently attempts to attract an additional black market visitor."
+    },
+    "skill_7": {
+        "name": "上层名人",
+        "description": "你在黑市的影响力让部分上层富人认识了你。现在只要你在展示框中展示奢侈品，白天就一定会有一位来自上层的奢侈品收购商拜访你。",
+        "cost": 700,
+        "icon": "skill_7.png",
+        "effect": "解锁本升级后，只要玩家在展示框中展示了具有奢侈品标签的物品，白天就一定会有一位来自上层的奢侈品收购商npc拜访玩家。该npc是游戏内原本就有的npc，她属于上层人，只收购奢侈品，其在玩家展示奢侈品时本就有概率来拜访。本升级只是让她的拜访概率变为100%，而不是额外来一个商人。 使用原版ulDiscerningShopper展示吸引入口，将概率改为100%并仅在技能与展示条件同时成立时忽略该NPC的到访冷却，确保每日展示可触发；不额外叠加另一个来访者，不修改其他上层NPC。",
+        "prerequisites": [],
+        "layout": {
+            "row": 5,
+            "column": 3
+        },
+        "name_en": "Upper-Level Celebrity",
+        "description_en": "Your black market influence has caught the attention of wealthy residents from the upper levels. Display a luxury item to guarantee a visit from an upper-level luxury buyer during the day."
+    }
+}

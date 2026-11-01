@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyName>FenceExpansion</AssemblyName>
+    <Version>0.3.2</Version>
+    <GameManaged Condition="'$(GameManaged)' == ''">$(MSBuildThisFileDirectory)..\..\Probably Stolen_copy\Probably Stolen_Data\Managed</GameManaged>
+    <RestoreSources></RestoreSources>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="$(GameManaged)\*.dll"><Private>false</Private></Reference>
+  </ItemGroup>
+  <PropertyGroup Condition="'$(FenceRuntimeProbe)' == 'true'">
+    <DefineConstants>$(DefineConstants);FENCE_RUNTIME_PROBE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(FenceRuntimeProbe)' == 'true'">
+    <Compile Include="../../tools/RuntimeProbe.cs" />
+  </ItemGroup>
+</Project>
+
+
+
+
+
+
